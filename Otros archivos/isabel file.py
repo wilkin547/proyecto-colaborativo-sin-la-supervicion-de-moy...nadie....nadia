@@ -1,12 +1,19 @@
 # Captura de datos para analisis
 texto = input("Favor introducir un texto(debe contener espacios): ")
 
+#guardamos los resultados en este diccionario
+resultados = {}
+
 def Contador_palabras(texto):
     # Para dividir el texto por palabras tomando en cuenta los espacios
     palabras = texto.split()
     # Cuenta la cantidad de palabras
     cantidad_palabras = len(palabras)
+
+    resultados["total de palabras: "] = len(palabras)
     return palabras, cantidad_palabras
+
+
 
 def Palabra_mas_larga(palabras):
     return max(palabras, key = len) # Contar en base a la longitud de  la palabra
